@@ -34,6 +34,13 @@ stages:
         repository: 'anufrancisdocker/training-app-image'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
+    
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'azure-container-registry-service-connection'
+        repository: 'angularapplicationtrainingappdocker'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
       
       
 
