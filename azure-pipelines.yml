@@ -29,15 +29,15 @@ stages:
           $(tag)
   
 
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'dockerhub-training-app'
-        repository: 'anufrancisdocker/training-app-image'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'azure-container-registry-training-app'
-        repository: 'angularapplicationtrainingappdocker.azurecr.io'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+    # - task: Docker@2
+    #   inputs:
+    #     containerRegistry: 'dockerhub-training-app'
+    #     repository: 'anufrancisdocker/training-app-image'
+    #     command: 'buildAndPush'
+    #     Dockerfile: '**/Dockerfile'
+    # - task: Docker@2
+    #   inputs:
+    #     containerRegistry: 'azure-container-registry-training-app'
+    #     repository: 'angularapplicationtrainingappdocker.azurecr.io'
+    #     command: 'buildAndPush'
+    #     Dockerfile: '**/Dockerfile'
